@@ -1,0 +1,30 @@
+[
+  
+  {
+    "id": 3,
+    "name": "Tasneem Amina",
+    "type": "Transmission Expert",
+    "location": "Kiambu road",
+    "rating": 5.0,
+    "status": "available",
+    "image": "src/assets/Mechanic3.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Gaius Kiptoo",
+    "type": "Diagnostics",
+    "location": "Kasarani",
+    "rating": 5.0,
+    "status": "available",
+    "image": "src/assets/Mechanic5.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Valentina Mwigora",
+    "type": "General Maintenance",
+    "location": "Juja",
+    "rating": 4.4,
+    "status": "available",
+    "image": "src/assets/Mechanic8.jpg"
+  }
+]
