@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../src/assets/Logo.png"
+import { Link } from "react-router-dom";
 
 export default function Navbar () {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -18,11 +19,11 @@ export default function Navbar () {
 
                 {/* Desktop */}
                 <ul className="hidden md:flex space-x-8 text-[rgb(139,0,0)] font-medium" >
-                    <li><a href="/" className="hover:text-[rgb(255,69,58)] hover:underline transition">Home</a></li>
-                    <li><a href="/services" className="hover:text-[rgb(255,69,58)] hover:underline transition">Services</a></li>
-                    <li><a href="/mechanics" className="hover:text-[rgb(255,69,58)] hover:underline transition">Mechanics</a></li>
-                    <li><a href="/carwashers" className="hover:text-[rgb(255,69,58)] hover:underline transition">Carwashers</a></li>
-                    <li><a href="/contact" className="hover:text-[rgb(255,69,58)] hover:underline transition">Contact us</a></li>
+                    <li><Link to="/" className="hover:text-[rgb(255,69,58)] hover:underline transition">Home</Link></li>
+                    <li><Link to="/services" className="hover:text-[rgb(255,69,58)] hover:underline transition">Services</Link></li>
+                    <li><Link to="/mechanics" className="hover:text-[rgb(255,69,58)] hover:underline transition">Mechanics</Link></li>
+                    <li><Link to="/carwashers" className="hover:text-[rgb(255,69,58)] hover:underline transition">Carwashers</Link></li>
+                    <li><Link to="/contact" className="hover:text-[rgb(255,69,58)] hover:underline transition">Contact Us</Link></li>
                 </ul>
 
                 {/* Hamburger */}
@@ -35,11 +36,11 @@ export default function Navbar () {
             {/* Mobile */}
             {menuOpen && (               
                 <div className="md:hidden bg-[rgb(255,245,245)] text-[rgb(139,0,0)] flex flex-col space-y-4 py-4 px-6 shadow-inner">
-                    <a href="/" className="font-semibold block">Home</a>
-                    <a href="/services" className="font-semibold block ">Services</a>
-                    <a href="/mechanics" className="font-semibold block ">Mechanics</a>
-                    <a href="/carwashers" className="font-semibold block ">Carwashers</a>
-                    <a href="/contact" className="font-semibold block ">Contact us</a>
+                    <Link to="/" className="font-semibold block" onClick={() => setMenuOpen(false)}>Home</Link>
+                    <Link to="/services" className="font-semibold block" onClick={() => setMenuOpen(false)}>Services</Link>
+                    <Link to="/mechanics" className="font-semibold block" onClick={() => setMenuOpen(false)}>Mechanics</Link>
+                    <Link to="/carwashers" className="font-semibold block" onClick={() => setMenuOpen(false)}>Carwashers</Link>
+                    <Link to="/contact" className="font-semibold block" onClick={() => setMenuOpen(false)}>Contact Us</Link>
                 </div>
          )}
         </header>
