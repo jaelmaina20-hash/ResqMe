@@ -45,7 +45,7 @@ const [current, setCurrent] = useState(0)
             <div className="absolute bottom-0 w-full text-center py-5 bg-white/80 backdrop-blur-sm">
                 <h1 className="text-3xl font-bold mb-2 text-[rgb(139,0,0)]">{slide.title}</h1>
                 <p className="text-lg mb-4 font-medium text-[rgb(139,0,0)]">{slide.text}</p>
-                <a href="/mechanics" className="bg-[rgb(139,0,0)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition">{slide.button}</a>
+                <a href="/mechanics" className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition">{slide.button}</a>
             </div>
         </div>
 

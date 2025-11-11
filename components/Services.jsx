@@ -46,7 +46,7 @@ export default function Services () {
                     <div className="absolute bottom-0 p-6 text-white">
                         <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
                         <p className="text-sm text-gray-200 mb-4">{service.description}</p>
-                        <button className="bg-[rgb(220,20,60)] text-white px-4 py-2 rounded-lg hover:bg-[rgb(255,69,58)] transition-all duration-300">{service.button}</button>
+                        <button className="bg-[rgb(139,0,60)] text-white px-4 py-2 rounded-lg hover:bg-[rgb(255,69,58)] transition-all duration-300">{service.button}</button>
                     </div>
                 </div>
             ))}
