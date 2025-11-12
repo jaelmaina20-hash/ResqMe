@@ -1,5 +1,5 @@
 import hero from "../src/assets/Hero.jpg"
-import mec from "../src/assets/mec.jpg"
+import mec from "../src/assets/Mechanic7.jpg"
 import wash from "../src/assets/wash.jpg"
 import tow from "../src/assets/tow.jpg"
 import emergency from "../src/assets/emergency2.jpg"
@@ -21,7 +21,7 @@ export default function Hero () {
         <section className="bg-[rgb(255,245,245)] py-16 px-6 md:px-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
             <div className="flex justify-center">
-                <img src={mec} alt="mechanic" className="rounded-2xl shadow-lg w-full md:w-[70%] object-cover"/>
+                <img src={mec} alt="mechanic" className="rounded-2xl shadow-lg w-full md:w-[90%] object-cover"/>
             </div>
             <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-[rgb(139,0,0)] mb-4">Our Mechanics</h2>

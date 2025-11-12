@@ -1,30 +1,92 @@
 [
-  
+  {
+    "id": 1,
+    "name": "Brian Mwangi",
+    "type": "Engine Specialist",
+    "location": "Nairobi CBD",
+    "rating": 4.9,
+    "status": "available",
+    "image": "src/assets/Mechanic1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Faith Wanjiru",
+    "type": "Electrical Systems Technician",
+    "location": "Thika Road",
+    "rating": 4.7,
+    "status": "available",
+    "image": "src/assets/Mechanic2.jpg"
+  },
   {
     "id": 3,
     "name": "Tasneem Amina",
     "type": "Transmission Expert",
-    "location": "Kiambu road",
+    "location": "Kiambu Road",
     "rating": 5.0,
     "status": "available",
     "image": "src/assets/Mechanic3.jpg"
   },
   {
+    "id": 4,
+    "name": "Kelvin Otieno",
+    "type": "Suspension and Alignment Specialist",
+    "location": "Lang’ata",
+    "rating": 4.8,
+    "status": "available",
+    "image": "src/assets/Mechanic4.jpg"
+  },
+  {
     "id": 5,
     "name": "Gaius Kiptoo",
-    "type": "Diagnostics",
+    "type": "Diagnostics Technician",
     "location": "Kasarani",
     "rating": 5.0,
     "status": "available",
     "image": "src/assets/Mechanic5.jpg"
   },
   {
+    "id": 6,
+    "name": "Collins Njoroge",
+    "type": "Brake Systems Expert",
+    "location": "Westlands",
+    "rating": 4.6,
+    "status": "available",
+    "image": "src/assets/Mechanic6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "David Ochieng",
+    "type": "Cooling and AC Specialist",
+    "location": "South B",
+    "rating": 4.9,
+    "status": "available",
+    "image": "src/assets/Mechanic7.jpg"
+  },
+  {
     "id": 8,
     "name": "Valentina Mwigora",
-    "type": "General Maintenance",
+    "type": "General Maintenance Technician",
     "location": "Juja",
     "rating": 4.4,
     "status": "available",
     "image": "src/assets/Mechanic8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Mercy Naliaka",
+    "type": "Hybrid and EV Systems Technician",
+    "location": "Karen",
+    "rating": 4.8,
+    "status": "available",
+    "image": "src/assets/Mechanic9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Anita Chebet",
+    "type": "Body and Paint Specialist",
+    "location": "Ngong Road",
+    "rating": 4.7,
+    "status": "available",
+    "image": "src/assets/Mechanic10.jpg"
   }
 ]
