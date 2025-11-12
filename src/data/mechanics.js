@@ -1,4 +1,17 @@
-[
+import Mechanic from "../assets/Mechanic.jpg";
+import Mechanic2 from "../assets/Mechanic2.jpg";
+import Mechanic3 from "../assets/Mechanic3.jpg";
+import Mechanic4 from "../assets/Mechanic4.jpg";
+import Mechanic5 from "../assets/Mechanic5.jpg";
+import Mechanic6 from "../assets/Mechanic6.jpg";
+import Mechanic7 from "../assets/Mechanic7.jpg";
+import Mechanic8 from "../assets/Mechanic8.jpg";
+import Mechanic9 from "../assets/Mechanic9.jpg";
+import Mechanic10 from "../assets/Mechanic10.jpg";
+
+
+
+export const mechanics =[
   {
     "id": 1,
     "name": "Brian Mwangi",
@@ -6,7 +19,7 @@
     "location": "Nairobi CBD",
     "rating": 4.9,
     "status": "available",
-    "image": "src/assets/Mechanic1.jpg"
+    "image": Mechanic
   },
   {
     "id": 2,
@@ -15,7 +28,7 @@
     "location": "Thika Road",
     "rating": 4.7,
     "status": "available",
-    "image": "src/assets/Mechanic2.jpg"
+    "image": Mechanic2
   },
   {
     "id": 3,
@@ -24,16 +37,16 @@
     "location": "Kiambu Road",
     "rating": 5.0,
     "status": "available",
-    "image": "src/assets/Mechanic3.jpg"
+    "image": Mechanic3
   },
   {
     "id": 4,
     "name": "Kelvin Otieno",
     "type": "Suspension and Alignment Specialist",
-    "location": "Lang’ata",
+    "location": "Lang'ata",
     "rating": 4.8,
     "status": "available",
-    "image": "src/assets/Mechanic4.jpg"
+    "image": Mechanic4
   },
   {
     "id": 5,
@@ -42,7 +55,7 @@
     "location": "Kasarani",
     "rating": 5.0,
     "status": "available",
-    "image": "src/assets/Mechanic5.jpg"
+    "image": Mechanic5
   },
   {
     "id": 6,
@@ -51,7 +64,7 @@
     "location": "Westlands",
     "rating": 4.6,
     "status": "available",
-    "image": "src/assets/Mechanic6.jpg"
+    "image": Mechanic6
   },
   {
     "id": 7,
@@ -60,7 +73,7 @@
     "location": "South B",
     "rating": 4.9,
     "status": "available",
-    "image": "src/assets/Mechanic7.jpg"
+    "image": Mechanic7
   },
   {
     "id": 8,
@@ -69,7 +82,7 @@
     "location": "Juja",
     "rating": 4.4,
     "status": "available",
-    "image": "src/assets/Mechanic8.jpg"
+    "image": Mechanic8
   },
   {
     "id": 9,
@@ -78,7 +91,7 @@
     "location": "Karen",
     "rating": 4.8,
     "status": "available",
-    "image": "src/assets/Mechanic9.jpg"
+    "image": Mechanic9
   },
   {
     "id": 10,
@@ -87,6 +100,6 @@
     "location": "Ngong Road",
     "rating": 4.7,
     "status": "available",
-    "image": "src/assets/Mechanic10.jpg"
+    "image": Mechanic10
   }
 ]

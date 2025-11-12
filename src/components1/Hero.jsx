@@ -1,9 +1,9 @@
-import hero from "../src/assets/Hero.jpg"
-import mec from "../src/assets/Mechanic7.jpg"
-import wash from "../src/assets/wash.jpg"
-import tow from "../src/assets/tow.jpg"
-import emergency from "../src/assets/emergency2.jpg"
-import inspection from "../src/assets/inspection.jpg"
+import hero from "../assets/Hero.jpg"
+import mec from "../assets/Mechanic7.jpg"
+import wash from "../assets/wash.jpg"
+import tow from "../assets/tow.jpg"
+import emergency from "../assets/emergency2.jpg"
+import inspection from "../assets/inspection.jpg"
 
 
 export default function Hero () {

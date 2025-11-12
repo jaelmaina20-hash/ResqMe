@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components1/Hero";
+import Hero from "../src/components1/Hero";
 import Footer from "../components/Footer";
 
 export default function ServicePage () {
