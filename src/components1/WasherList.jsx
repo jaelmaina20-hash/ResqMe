@@ -1,6 +1,7 @@
 import { washers } from "../data/carwashersData";
 import Washer from "./Washer";
 import washerAd from "../assets/washer2.jpg"
+import { Link } from "react-router-dom";
 
 export default function WasherList() {
   return (
@@ -25,9 +26,8 @@ export default function WasherList() {
             Join our growing network of professional car washers. Showcase your
             skills, connect with new clients, and earn on your own schedule.
           </p>
-          <button className="bg-[rgb(139,0,60)] hover:bg-[rgb(220,20,60)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out">
-            Register
-          </button>
+         
+          <Link to="/signup" className="bg-[rgb(139,0,60)] hover:bg-[rgb(220,20,60)] text-white font-semibold py-3 px-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 ease-in-out inline-block">Register</Link>
         </div>
       </div>
     </>
