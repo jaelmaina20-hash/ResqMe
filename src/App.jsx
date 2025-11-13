@@ -5,6 +5,7 @@ import MechanicPage from "../pages/MechanicPage"
 import Carwasher from "../pages/Carwasher"
 import Contact from "../pages/Contact"
 import MechanicMap from "../components/Mecmap"
+import ScrollToTop from "../components/ScrollTop"
 
 
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="/services" element={<ServicePage/>}/>
