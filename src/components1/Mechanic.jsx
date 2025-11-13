@@ -1,4 +1,33 @@
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function Mechanic({ mechanic }) {
+  const handleCheckAvailability = () => {
+    const isAvailable = Math.random() < 0.5;
+
+    if (isAvailable) {
+      toast.success("A mechanic is available! Connecting you now...", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+      });
+    } else {
+      toast.error("All mechanics are currently busy. Try again soon.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+      });
+    }
+  };
+
   return (
     <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <img src={mechanic.image} alt={mechanic.name} className="w-full h-56 object-cover"/>
@@ -6,8 +35,10 @@ export default function Mechanic({ mechanic }) {
         <h3 className="text-xl font-bold">{mechanic.name}</h3>
         <p className="text-sm italic">{mechanic.type}</p>
         <p className="mt-2 text-gray-600"><span className="font-semibold">Location:</span> {mechanic.location}</p>
-        <p className="text-gray-600"><span className="font-semibold">Rating:</span> ⭐ {mechanic.rating}</p>
-        <p className={`mt-2 font-semibold ${mechanic.status === "available" ? "text-green-600" : "text-red-600"}`}>{mechanic.status === "available" ? "Available" : "Unavailable"}</p>
+        <p className="text-gray-600 mb-4"><span className="font-semibold">Rating:</span>{mechanic.rating}</p>
+
+        <button onClick={handleCheckAvailability} className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg hover:bg-[rgb(255,69,58)] transition-all duration-300">Call Mechanic</button>        
+        <ToastContainer />
       </div>
     </div>
   );
