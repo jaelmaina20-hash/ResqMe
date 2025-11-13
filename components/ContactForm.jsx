@@ -1,25 +1,28 @@
 import React from "react";
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function ContactForm() {
   const [requestType, setRequestType] = useState("");
   const [emergencyType, setEmergencyType] = useState("");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let message = `You selected "${requestType}".`;
+    // let message = `You selected "${requestType}".`;
 
-    if (requestType === "Emergency Help") {
-      message += `\nEmergency type: ${emergencyType}`;
-    } else if (requestType === "Book Service") {
-      message += `\nRequested date: ${date}`;
-    } else if (requestType === "Request Towing") {
-      message += `\nLocation: ${location}`;
-    }
+    // if (requestType === "Emergency Help") {
+    //   message += `\nEmergency type: ${emergencyType}`;
+    // } else if (requestType === "Book Service") {
+    //   message += `\nRequested date: ${date}`;
+    // } else if (requestType === "Request Towing") {
+    //   // message += `\nLocation: ${location}`;
+    // }
 
-    alert(`Form submitted!\n\n${message}`);}
+    toast.success("Form submitted successfully!");}
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-8xl mx-auto">
     <section className="min-h-screen bg-white flex flex-col items-center py-6 relative overflow-hidden">
@@ -65,7 +68,7 @@ export default function ContactForm() {
                 <option value="Overheating">Car overheating</option>
               </select>
 
-              <button type="submit"className="w-full bg-[rgb(255,0,0)] hover:bg-[rgb(220,20,60)] text-white font-bold py-3 px-10 rounded-lg transition-all duration-300 ease-in-out">Deploy Help</button>
+              <button type="submit"className="w-full bg-[rgb(139,0,60)] hover:bg-[rgb(220,20,60)] text-white font-bold py-3 px-10 rounded-lg transition-all duration-300 ease-in-out">Deploy Help</button>
             </div>
           )}
 
@@ -127,11 +130,19 @@ export default function ContactForm() {
           </div>
 
           <div className="text-center pt-4">
-              <button type="submit" className="bg-[rgb(139,0,60)] hover:bg-[rgb(220,20,60)] text-white font-bold py-3 px-10 rounded-lg hover:-translate-y-1 transition-all duration-300 ease-in-out">Send Message</button>
+              <button type="submit" className="w-full bg-[rgb(139,0,60)] hover:bg-[rgb(220,20,60)] text-white font-bold py-3 px-10 rounded-lg transition-all duration-300 ease-in-out">Send Message</button>
           </div>
         </form>
       </div>
     </section>  
+    <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover
+        theme="light"/>
    </div> 
   );
 }

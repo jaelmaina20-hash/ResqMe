@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function MechanicsList() {
   return (
       <>
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8 bg-[rgb(255,245,245)]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8 bg-[rgb(255,240,240)]">
       {mechanics.map((mech) => (<Mechanic key={mech.id} mechanic={mech} />))}
     </div>
 

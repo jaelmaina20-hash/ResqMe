@@ -9,7 +9,7 @@ export default function Footer () {
         <footer className="bg-[rgb(255,245,245)] text-[rgb(139,0,0)] border-t-4 border-[rgb(139,0,0)] py-10">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 px-6">
                 <div className="space-y-3">
-                    <img src={logo} alt="ResqMe Logo" className="w-30 h-20 shadow-md" />
+                    <img src={logo} alt="ResqMe Logo" className="w-50 h-50" />
                 </div>
                 {/* Quick Links */}
                 <div>

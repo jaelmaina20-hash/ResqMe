@@ -25,7 +25,8 @@ export default function Hero () {
             </div>
             <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-[rgb(139,0,0)] mb-4">Mechanics</h2>
-                <p className="text-gray-700 leading-relaxed text-lg">Our mechanics are certified professionals, each specialized in different areas of automotive care. They are available for emergencies, car checks, general servicing, and scheduled bookings. Whether you need quick roadside assistance or want to plan ahead for regular maintenance, our mechanics can come directly to your location. Through ResqMe, you can easily locate and connect with the nearest trusted expert based on your geographical position, ensuring reliable help is always within reach.</p>
+                <p className="text-gray-700 leading-relaxed text-lg mb-5">Our mechanics are certified professionals, each specialized in different areas of automotive care. They are available for emergencies, car checks, general servicing, and scheduled bookings. Whether you need quick roadside assistance or want to plan ahead for regular maintenance, our mechanics can come directly to your location. Through ResqMe, you can easily locate and connect with the nearest trusted expert based on your geographical position, ensuring reliable help is always within reach.</p>
+                <a href="/carwashers" className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition-all">Get a Mechanic</a>
             </div>
            </div>
         </section>
@@ -35,9 +36,10 @@ export default function Hero () {
                     <h2 className="text-3xl md:text-4xl font-bold text-[rgb(139,0,0)] mb-4">
                     Car Washers
                     </h2>
-                    <p className="text-gray-700 leading-relaxed text-lg">
+                    <p className="text-gray-700 leading-relaxed text-lg mb-5">
                     Our car washers are trained and reliable professionals who take pride in giving your vehicle a spotless finish, wherever you are. You can schedule a wash in advance or request an on-the-go service at your convenience. Each washer is equipped with the right tools and eco-friendly cleaning products to ensure quality care. With location-based service, a trusted washer can come directly to your home, office, or any preferred spot.
                     </p>
+                    <a href="/carwashers" className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition-all">Get a Carwasher</a>
                 </div>
                 <div className="order-1 md:order-2 flex justify-center">
                     <img src={wash} alt="car wash" className="rounded-2xl shadow-lg w-full md:w-[90%] object-cover"/>
@@ -53,8 +55,9 @@ export default function Hero () {
           <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-[rgb(139,0,0)] mb-4">
                 Towing Services</h2>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 leading-relaxed text-lg mb-5">
                 When your vehicle can't move, our towing team is ready to step in. We provide safe, efficient, and reliable towing services anytime,anywhere. Whether it's a breakdown, accident, or relocation, professional help is just a request away. Our drivers are trained to handle vehicles with care, ensuring smooth transportation to your preferred garage or destination. With ResqMe, you can easily track and contact the nearest towing service using your live location.</p>
+                <a href="/contact" className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition-all">Get Help</a>
           </div>
         </div>
       </section>
@@ -64,9 +67,10 @@ export default function Hero () {
           <div className="order-2 md:order-1">
             <h2 className="text-3xl md:text-4xl font-bold text-[rgb(139,0,0)] mb-4">
               Emergency Help</h2>
-            <p className="text-gray-700 leading-relaxed text-lg">
+            <p className="text-gray-700 leading-relaxed text-lg mb-5">
               In moments of distress, ResqMe ensures that help is never out of reach. Our emergency support team connects you to immediate assistance — whether youre stranded, injured, or in need of urgent roadside aid. We respond promptly, prioritizing safety and care above all else. Using your live location, our system ensures
               that help finds you fast, wherever you are.</p>
+              <a href="/contact" className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition-all">Get Help</a>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <img
@@ -87,9 +91,10 @@ export default function Hero () {
                     We connect you with certified professionals who perform comprehensive car evaluations like checking engine health, electrical systems, body condition, and safety features. 
                     Whether you're buying from a dealer or an individual, our inspectors ensure transparency and peace of mind by giving you a detailed report before you commit.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed">
+                <p className="mt-4 text-lg leading-relaxed mb-5">
                     You can book an inspection through ResqMe, and our experts will come to the seller's location to assess the car on your behalf. With our support, you,ll know exactly what you're getting, no surprises, just confidence in your purchase.
                 </p>
+                <a href="/carwashers" className="text-[rgb(139,0,60)] px-6 py-3 font-semibold hover:text-[rgb(255,0,0)] transition-all">Coming Soon</a>
             </div>
 
         </div>
