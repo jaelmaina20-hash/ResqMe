@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import image1 from "../src/assets/Image1.jpg";
 import image2 from "../src/assets/Image2.jpg";
 import image3 from "../src/assets/Image3.jpg";
+
 
 const slides = [
     {
@@ -16,7 +19,7 @@ const slides = [
         image: image2,
         title: "Help is just a tap away",
         text: "Request a certified mechanic in seconds and track their arrival in real time.",
-        button: "Track My Mechanic",
+        button: "Track my Mechanic",
     },
 
     {
@@ -29,6 +32,8 @@ const slides = [
 
 export default function Heroslider () {
 const [current, setCurrent] = useState(0)
+const [location, setLocation] = useState(null)
+const navigate = useNavigate();
 
     useEffect(() => {
    const timer = setInterval(() => setCurrent((prev) => (prev + 1) % slides.length), 6000)
@@ -38,6 +43,39 @@ const [current, setCurrent] = useState(0)
 
     const slide = slides[current];
 
+    const handleMechanic = async () => {
+        if(!navigator.geolocation) {
+            alert('Geolocation is not supported by your browser');
+            return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            async (pos) => {
+                const {latitude, longitude } = pos.coords;
+
+                try {
+                    const response = await fetch(
+                        `https://api.positionstack.com/v1/reverse?access_key=${import.meta.env.VITE_POSITIONSTACK_KEY}&query=${latitude},${longitude}`
+                    );
+
+                    const data = await response.json();
+
+                    if (data && data.data && data.data[0]) {
+                        const loc = data.data[0].label;
+                        setLocation(loc);
+                        navigate("/track-mechanic");
+                    } else {
+                        alert ("Could not fetch location details")
+                    }
+                }catch (error) {
+                    console.error(error)
+                    alert ('Error fetching location. Please try again')
+                }
+            },
+            () => alert("Unable to retrieve your location")
+        )
+    }
+
     return(
 
         <div className="relative w-full h-[130vh] overflow-hidden">
@@ -45,7 +83,14 @@ const [current, setCurrent] = useState(0)
             <div className="absolute bottom-0 w-full text-center py-5 bg-white/80 backdrop-blur-sm">
                 <h1 className="text-3xl font-bold mb-2 text-[rgb(139,0,0)]">{slide.title}</h1>
                 <p className="text-lg mb-4 font-medium text-[rgb(139,0,0)]">{slide.text}</p>
-                <a href="/mechanics" className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition">{slide.button}</a>
+                
+                {slide.button === "Track my Mechanic" ? (
+
+                   <button onClick={handleMechanic} className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition">{slide.button}</button>) : (<a href="/mechanics" className="bg-[rgb(139,0,60)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[rgb(255,0,0)] transition">{slide.button}</a>)}
+
+                {location && (<p className="mt-4 text-[rgb(139,0,0)] font-semibold">Current Location: {location}</p>)}
+
+                
             </div>
         </div>
 

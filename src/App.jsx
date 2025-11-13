@@ -4,6 +4,7 @@ import ServicePage from "../pages/ServicePage"
 import MechanicPage from "../pages/MechanicPage"
 import Carwasher from "../pages/Carwasher"
 import Contact from "../pages/Contact"
+import MechanicMap from "../components/Mecmap"
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/mechanics" element={<MechanicPage/>}/>
         <Route path="/carwashers" element={<Carwasher/>}/>
         <Route path="/contact" element={<Contact/>}/> 
+        <Route path="/track-mechanic" element={<MechanicMap />}/>
       </Routes>
     </Router>   
       
