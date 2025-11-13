@@ -1,67 +1,65 @@
-import { useState } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/firebase";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { signupUser } from "../src/slices/authSlice";
 import { useNavigate } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
-export default function SignUp() {
+export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState("mechanic");
+  const { loading, error } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSignUp = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!role) {
-      toast.error("Please select a role!");
-      return;
-    }
-
-    try {     
-      await createUserWithEmailAndPassword(auth, email, password);
-      localStorage.setItem("role", role);
-        toast.success("Account created successfully!");     
-        setTimeout(() => navigate("/dashboard"), 1500);
+    try {
+      await dispatch(signupUser({ email, password, role })).unwrap();
+      navigate("/");
     } catch (error) {
-      toast.error(error.message);
+      console.error("Signup failed:", error.message);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[rgb(255,245,245)] p-6">
-      <div className="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full">
-        <h2 className="text-2xl font-bold text-[rgb(139,0,0)] mb-6 text-center">
-          Sign Up
-        </h2>
-        <form onSubmit={handleSignUp} className="space-y-4">
-          <input type="email" placeholder="Email" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[rgb(255,69,58)]"
-            value={email} onChange={(e) => setEmail(e.target.value)} required/>
-          <input type="password" placeholder="Password" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-[rgb(255,69,58)]" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-[rgb(255,245,245)] p-8 rounded-2xl ">
+  {/* <h2 className="text-3xl font-bold text-center text-[rgb(139,0,0)]">
+    Sign Up
+  </h2> */}
 
-          {/* Role Selection */}
-          <div className="flex justify-between mt-2">
-                <label className="flex items-center gap-2">
-                <input type="radio" name="role" value="mechanic" checked={role === "mechanic"} onChange={(e) => setRole(e.target.value)}className="accent-[rgb(139,0,0)]"/>Mechanic</label>
-                <label className="flex items-center gap-2">
-                <input type="radio" name="role" value="carwasher" checked={role === "carwasher"} onChange={(e) => setRole(e.target.value)}className="accent-[rgb(139,0,0)]"/>Car Washer</label>
-          </div>
+  <input
+    type="email"
+    placeholder="Enter your Email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    className="border border-[rgb(250,128,114)] p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-[rgb(255,69,58)] text-[rgb(139,0,0)] placeholder:text-[rgb(220,20,60)]"
+  />
 
-          <button type="submit" className="w-full bg-[rgb(139,0,60)] text-white py-3 rounded-lg hover:bg-[rgb(220,20,60)] transition-all"> Register </button>
-        </form>
-      </div>
+  <input
+    type="password"
+    placeholder="Enter your Password"
+    value={password}
+    onChange={(e) => setPassword(e.target.value)}
+    className="border border-[rgb(250,128,114)] p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-[rgb(255,69,58)] text-[rgb(139,0,0)] placeholder:text-[rgb(220,20,60)]"
+  />
 
-      {/* Toast notifications */}
-      <ToastContainer
-        position="top-center"
-        autoClose={3000}
-        hideProgressBar={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-        theme="colored"
-      />
-    </div>
+  <select
+    value={role}
+    onChange={(e) => setRole(e.target.value)}
+    className="border border-[rgb(250,128,114)] p-2 rounded-xl focus:outline-none focus:ring-2 focus:ring-[rgb(255,69,58)] text-[rgb(139,0,0)] bg-white"
+  >
+    <option value="mechanic">Mechanic</option>
+    <option value="carwasher">Carwasher</option>
+  </select>
+
+  <button
+    className="p-2 rounded-xl text-white bg-[rgb(139,0,60)] hover:bg-[rgb(255,69,58)] transition-all duration-300 font-semibold shadow-md hover:shadow-lg"
+    disabled={loading}
+  >
+    {loading ? "Creating..." : "Sign Up"}
+  </button>
+
+  {error && <p className="text-[rgb(220,20,60)] text-sm text-center">{error}</p>}
+</form>
   );
 }

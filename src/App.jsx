@@ -6,7 +6,9 @@ import Carwasher from "../pages/Carwasher"
 import Contact from "../pages/Contact"
 import MechanicMap from "../components/Mecmap"
 import ScrollToTop from "../components/ScrollTop"
-import SignUp from "../components/SignUp"
+import SignupPage from "../pages/SignupPage"
+
+
 
 
 
@@ -24,7 +26,8 @@ function App() {
         <Route path="/carwashers" element={<Carwasher/>}/>
         <Route path="/contact" element={<Contact/>}/> 
         <Route path="/track-mechanic" element={<MechanicMap />}/>
-        <Route path="/signup" element={<SignUp />}/>
+        <Route path="/signup" element={< SignupPage/>}/>
+       
       </Routes>
     </Router>   
       
