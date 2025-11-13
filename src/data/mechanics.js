@@ -7,7 +7,7 @@ import Mechanic6 from "../assets/Mechanic6.jpg";
 import Mechanic7 from "../assets/Mechanic7.jpg";
 import Mechanic8 from "../assets/Mechanic8.jpg";
 import Mechanic9 from "../assets/Mechanic9.jpg";
-import Mechanic10 from "../assets/Mechanic10.jpg";
+
 
 
 
@@ -92,14 +92,5 @@ export const mechanics =[
     "rating": 4.8,
     "status": "available",
     "image": Mechanic9
-  },
-  {
-    "id": 10,
-    "name": "Anita Chebet",
-    "type": "Body and Paint Specialist",
-    "location": "Ngong Road",
-    "rating": 4.7,
-    "status": "available",
-    "image": Mechanic10
   }
-]
+  ]

@@ -1,6 +1,6 @@
 import hero from "../assets/Hero.jpg"
 import mec from "../assets/Mechanic7.jpg"
-import wash from "../assets/wash.jpg"
+import wash from "../assets/washer4.jpg"
 import tow from "../assets/tow.jpg"
 import emergency from "../assets/emergency2.jpg"
 import inspection from "../assets/inspection.jpg"
@@ -24,7 +24,7 @@ export default function Hero () {
                 <img src={mec} alt="mechanic" className="rounded-2xl shadow-lg w-full md:w-[90%] object-cover"/>
             </div>
             <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[rgb(139,0,0)] mb-4">Our Mechanics</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-[rgb(139,0,0)] mb-4">Mechanics</h2>
                 <p className="text-gray-700 leading-relaxed text-lg">Our mechanics are certified professionals, each specialized in different areas of automotive care. They are available for emergencies, car checks, general servicing, and scheduled bookings. Whether you need quick roadside assistance or want to plan ahead for regular maintenance, our mechanics can come directly to your location. Through ResqMe, you can easily locate and connect with the nearest trusted expert based on your geographical position, ensuring reliable help is always within reach.</p>
             </div>
            </div>
@@ -77,7 +77,7 @@ export default function Hero () {
 
     <div className="relative bg-[rgb(255,245,245)] text-gray-800 py-16 px-8 md:px-20 flex flex-col md:flex-row items-center gap-10">            
             <div className="md:w-1/2">
-                <img src={inspection} alt="Pre-purchase inspection" className="rounded-2x shadow-lg w-full object-cover h-[400px]"/>
+                <img src={inspection} alt="Pre-purchase inspection" className="rounded-2xl shadow-lg w-full object-cover h-[400px]"/>
             </div>
 
             <div className="md:w-1/2">

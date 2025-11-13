@@ -1,4 +1,9 @@
-[
+import washer1 from "../assets/washer1.jpg";
+import washer2 from "../assets/washer2.jpg";
+import washer3 from "../assets/washer3.jpg";
+import washer4 from "../assets/washer4.jpg";
+
+export const washers =[
   {
     "id": 1,
     "name": "Ian Barasa",
@@ -6,7 +11,7 @@
     "location": "Donholm",
     "rating": 4.9,
     "status": "available",
-    "image": "src/assets/washer.jpg"
+    "image": washer1
   },
   {
     "id": 2,
@@ -15,7 +20,7 @@
     "location": "Westlands",
     "rating": 4.9,
     "status": "available",
-    "image": "src/assets/washer1.jpg"
+    "image": washer2
   },
   {
     
@@ -25,7 +30,7 @@
     "location": "Lang'ata",
     "rating": 4.5,
     "status": "available",
-    "image": "src/assets/washer2.jpg"
+    "image": washer3
   },
   
   {
@@ -35,8 +40,6 @@
     "location": "Karen",
     "rating": 4.9,
     "status": "available",
-    "image": "src/assets/washer3.jpg"
+    "image": washer4
   }
-  
-  
 ]
